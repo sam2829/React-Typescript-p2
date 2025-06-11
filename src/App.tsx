@@ -1,10 +1,21 @@
+import { useRef } from "react";
+import Button from "./components/Button";
+import Container from "./components/Container";
 import Input from "./components/Input";
+import Form from "./components/Form";
 
 function App() {
+  const input = useRef(null);
+
   return (
     <main>
-      <Input id="name" label="Your name" />
-      <Input id="age" label="Your age" />
+      <Form>
+        <Input type="text" label="Name" id="name" />
+        <Input type="number" label="Age" id="age" />
+        <p>
+          <Button>Save</Button>
+        </p>
+      </Form>
     </main>
   );
 }
